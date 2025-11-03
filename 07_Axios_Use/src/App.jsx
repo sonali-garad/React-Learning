@@ -15,7 +15,6 @@ const getUserData = async () =>
   try{
     const response = await axios.get("https://jsonplaceholder.typicode.com/posts");
     setData(response)
-    // console.log(response)
   }
   catch(e)
   {
