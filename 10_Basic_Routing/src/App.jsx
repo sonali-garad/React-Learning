@@ -8,17 +8,25 @@ import Home from './Home'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [login, isSetLogin]= useState(true)
 
   return (
     <>
+    {login ?(
   <BrowserRouter>
   <Routes>
 <Route path ="/" element={<Landing/>} />
 <Route path ="/home" element={<Home/>}/>
 
   </Routes>
-  </BrowserRouter>
-    </>
+  </BrowserRouter> 
+    ):(
+      <>
+      <h1>Not a valid user</h1>
+      </>
+    )
+  }
+  </>
   )
 }
 
