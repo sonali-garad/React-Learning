@@ -1,0 +1,36 @@
+***CONTEXT API --
+Context API in React is used to share data globally across components without passing props manually at every level.
+In a normal React application, data flows from parent to child using props. This works well for small component trees, but when the application grows, passing the same data through multiple layers becomes difficult and messy. This problem is called prop drilling.
+Context API solves this problem by providing a way to store data in a central place, so that any component in the component tree can access it directly, without needing the data to be passed through intermediate components.
+In simple terms, Context acts like a global storage for data that many components need.
+
+Why Context API is needed?
+
+-Without Context:
+Data has to be passed from parent → child → grandchild even if intermediate components don’t need it.
+Code becomes harder to read, maintain, and scale.
+
+-With Context:
+Data is provided once.
+Any component that needs it can directly consume it.
+No unnecessary prop passing.
+
+*****Main parts of Context API
+Context API has three core parts:
+
+1 - createContext
+Used to create a context object.
+This context holds the shared data.
+
+2 - Provider
+Used to provide data to components.
+Wraps the part of the component tree that needs access to the data.
+
+3- Consumer / useContext
+Used by components to read the data from context.
+useContext is the modern and preferred way.
+
+*******How Context works (flow) -
+-A context is created using createContext.
+-A Provider wraps components and supplies data.
+-Any child component can access the data using useContext.
