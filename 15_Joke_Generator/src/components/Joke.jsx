@@ -16,7 +16,8 @@ const callApi = async()=>{
 console.log("joke state data ", joke)
     return(
         <>
-        <h1>Joke Generator</h1>
+        <div className="joke-compo">
+        <h1 id="header">Joke Generator</h1>
         <h3>Here is Randome joke generator</h3>
         <Button
         callApi = {callApi}
@@ -24,7 +25,7 @@ console.log("joke state data ", joke)
         <div>
         {/* Joke will be displayed here */}
         <p> {joke} </p>
-
+        </div>
         </div>
         </>
     )

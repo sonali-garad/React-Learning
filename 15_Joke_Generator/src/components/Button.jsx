@@ -4,7 +4,7 @@ const  Button = ({
 {
     return (
         <>
-        <button
+        <button className="button"
         onClick={callApi}
         > 
         Click here to generate Joke
